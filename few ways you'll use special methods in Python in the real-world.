@@ -1,0 +1,20 @@
+cart = Cart()
+cart.add('Laptop')
+cart.add('Wireless mouse')
+cart.add('Ergo keyboard')
+cart.add('Monitor')
+
+for item in cart:
+   print(item, end=' ') # Laptop Wireless mouse Ergo keyboard Monitor
+
+print(len(cart)) # 4
+print(cart[3]) # Monitor
+
+print('Monitor' in cart) # True
+print('banana' in cart) # False
+
+cart.remove('Ergo keyboard')
+
+print(cart.list_items()) # ['Laptop', 'Wireless mouse', 'Monitor']
+
+cart.remove('banana') # banana is not in cart
