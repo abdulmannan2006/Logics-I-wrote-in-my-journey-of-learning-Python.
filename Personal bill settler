@@ -1,0 +1,36 @@
+def calc(total, expense, include, on):
+    money = round(total / include, 2)
+    people = ['Mannan', 'Zahid', 'Faris', 'Rohit', 'Shayan', 'Taymoor', 'Salar', 'Zoha'] 
+    
+    print(f"{expense} for {total} riyal")
+    
+   
+    breakdown_parts = []
+    for i in range(include):
+        person_index = on[i]
+        person_name = people[person_index]
+        breakdown_parts.append(f"\n{person_name}s {money}")
+        
+   
+    print(" +".join(breakdown_parts))
+    print("_____") 
+
+def paid(*transactions):
+    people = ['Mannan', 'Zahid', 'Faris', 'Rohit', 'Shayan', 'Taymoor', 'Salar', 'Zoha']
+    
+    for index, amount in transactions:
+        name = people[index]
+        print(f"{name} paid {amount}")
+    print("_____") 
+def settles(*settlements):
+    people = ['Mannan', 'Zahid', 'Faris', 'Rohit', 'Shayan', 'Taymoor', 'Salar', 'Zoha']
+    
+    
+    for giver_index, receiver_index, amount in settlements:
+        giver = people[giver_index]
+        receiver = people[receiver_index]
+        print(f"{giver} will pay {receiver} {amount} riyal")
+
+calc(0,'x',1, [0])
+paid((0,1))
+settles((0,0,1))
